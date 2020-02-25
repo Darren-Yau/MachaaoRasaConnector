@@ -13,7 +13,7 @@ api_token = ""
 base_url = ""
 
 
-class MachaaoInput(InputChannel):
+class MachaaoInputChannel(InputChannel):
     """A custom http input channel.
 
     This implementation is the basis for a custom implementation of a chat
@@ -122,7 +122,7 @@ class MachaaoOutputChannel(OutputChannel):
         }
 
         payload = {
-            "users": recipient_id,
+            "users": [recipient_id],
             "identifier": "BROADCAST_FB_TEMPLATE_GENERIC",
             "notificationType": "REGULAR",
             "source": "firebase",
