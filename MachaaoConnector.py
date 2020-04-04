@@ -75,7 +75,7 @@ class MachaaoInputChannel(InputChannel):
                     "An exception occured while handling "
                     "user message '{}'.".format(text)
                 )
-            return response.json(collector)
+            return response.text("Bot message delivered.")
         return custom_webhook
 
 
